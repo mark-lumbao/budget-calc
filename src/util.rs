@@ -5,7 +5,6 @@ pub fn get_days_till_next_salary() -> u32 {
   let mut count: u32 = 1; // @note start with 1 to include today
   let days_till_next_salary = loop {
     let dayoffset = Local::today() + Duration::days(count.into());
-    println!("{}, {}, {}", count, Local::today().day(), dayoffset.day());
     /* @todo
      * make salary dates dynamic by making including it in the arguments
      */
